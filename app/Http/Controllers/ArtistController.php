@@ -73,7 +73,7 @@ class ArtistController extends Controller
 
         $validator = Validator::make($form_data, Artist::$rules, Artist::$messages);
         if ($validator->fails()) {
-            return Response::json([
+            return response([
                 'error' => true,
                 'message' => $validator->messages()->first(),
                 'code' => 400
@@ -133,7 +133,7 @@ class ArtistController extends Controller
         ], Artist::$messages);
 
         if ($validator->fails()) {
-            return Response::json([
+            return response([
                 'error' => true,
                 'message' => $validator->messages()->first(),
                 'code' => 400

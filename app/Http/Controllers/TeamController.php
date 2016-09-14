@@ -42,7 +42,7 @@ class TeamController extends Controller
         $form_data = $request->all();
         $validator = Validator::make($form_data, Team::$rules, Team::$messages);
         if ($validator->fails()) {
-            return Response::json([
+            return response([
                 'error' => true,
                 'message' => $validator->messages()->first(),
                 'code' => 400
@@ -75,7 +75,7 @@ class TeamController extends Controller
         ], Team::$messages);
 
         if ($validator->fails()) {
-            return Response::json([
+            return response([
                 'error' => true,
                 'message' => $validator->messages()->first(),
                 'code' => 400
