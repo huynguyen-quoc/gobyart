@@ -1,0 +1,33 @@
+/*----------------------------------------------------------------*/
+/*  NAVIGATION CONTENT
+/*----------------------------------------------------------------*/
+.page.home .slide--top .navigation-toggle {
+  color: #FFFFFF;
+}
+.navigation-toggle {
+  float: right;
+  margin: 3.5% 12% 0 0;
+  color: rgb(151,151,151);
+  font-size: 200%;
+  &:hover {
+    text-decoration: none;
+  }
+}
+@media only screen and (max-width:1000px){
+  .hide-if-mobile-menu{
+    display: none;
+  }
+  .show-if-mobile-menu{
+    display: block;
+  }
+}
+
+
+@media only screen and (min-width:1001px){
+  .hide-if-mobile-menu{
+    display: block;
+  }
+  .show-if-mobile-menu{
+    display: none;
+  }
+}

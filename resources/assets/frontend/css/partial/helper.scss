@@ -1,0 +1,368 @@
+
+/*----------------------------------------------------------------*/
+/*  Helpers
+/*----------------------------------------------------------------*/
+
+$border-style: 1px solid rgba(0, 0, 0, 0.12);
+
+.border,
+.b {
+    border: $border-style;
+}
+
+.border-top,
+.bt {
+    border-top: $border-style;
+}
+
+.border-right,
+.br {
+    border-right: $border-style;
+}
+
+.border-bottom,
+.bb {
+    border-bottom: $border-style;
+}
+
+.border-left,
+.bl {
+    border-left: $border-style;
+}
+
+.no-margin {
+    margin-right: 0;
+}
+
+.no-radius {
+    border-radius: 0;
+}
+
+.divider-vertical {
+    background: rgba(0, 0, 0, 0.12);
+    height: 24px;
+    width: 1px;
+    margin: 0 8px;
+}
+
+// Soft hide (don't remove from DOM flow)
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hidden-data {
+    display: none;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+a.un-decoration,
+a:hover.un-decoration {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clear-fix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.full-height {
+    height: 100% !important;
+}
+
+// Images in links
+a {
+
+    img {
+        display: block;
+        outline: none;
+    }
+    .gobyArtIcon {
+        margin: 0 0.5rem;
+    }
+}
+
+// Responsive images
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+    border: none;
+}
+
+
+
+.col_padding_bottom {
+    padding-bottom: 3rem !important;
+}
+
+.col_padding_top {
+  padding-top: 3rem !important;
+}
+
+.bg-grey {
+  background: #f6f6f6;
+}
+.divider {
+    border: none;
+    border-top: 1px solid black;
+    height: 0px;
+    width: 100%;
+    opacity: .5;
+    margin: 0;
+    margin-bottom: 2%;
+}
+.loader-container {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-family: $font-family-condensed-light;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    & .icon-label{
+        font-family: $font-family-light;
+        font-size : 1.7rem;
+    }
+    &.active {
+        display: block;
+        & .spinner{
+            -webkit-animation:spin 2s linear infinite;
+            -moz-animation:spin 2s linear infinite;
+            -o-animation:spin 2s linear infinite;
+            animation:spin 2s linear infinite;
+        }
+    }
+}
+.content {
+    margin: 0 auto;
+    padding: 0 12%;
+    overflow: hidden;
+    clear: both;
+    position: relative;
+}
+.full-width {
+    width: 100%;
+    overflow: hidden;
+}
+.with-bottom-padding{
+  padding-bottom: 2.5%;
+}
+.headbox {
+    padding: 2em 0 0.75em 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+    position: relative;
+    font-family : $font-family-condensed-light;
+    &.evenpadding {
+      padding: 1.5em 0 1.5em 0;
+    }
+}
+
+.button-more {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #9d9d9d;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1rem;
+    line-height: 2.3rem;
+    font-family : $font-family-condensed-light;
+    .gobyArtIcon {
+        &.medium {
+            font-size: 2.8rem;
+        }
+    }
+}
+
+/* --------- 1 Column --------- */
+
+.col1_1{
+    width:100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* --------- 2 Columns --------- */
+
+.col2_1{
+    width:47.5%;
+    margin-left: 0;
+    margin-right: 5%;
+    float:left;
+}
+.col2_2{
+    width:47.5%;
+    margin-left: 0;
+    margin-right: 0;
+    float:right;
+}
+
+/* --------- 3 Columns --------- */
+
+.col3_1{
+    width:35%;
+    margin-left: 0;
+    margin-right: 5%;
+    float:left;
+}
+.col3_2{
+    width:25%;
+    margin-left: 0;
+    margin-right: 5%;
+    float:left;
+}
+.col3_3{
+    width:30%;
+    margin-left: 0;
+    margin-right: 0;
+    float:left;
+}
+
+/* --------- 3 Columns even --------- */
+
+.col1_3{
+    width:30%;
+    margin-left: 0;
+    margin-right: 0;
+    float:left;
+}
+
+.col1_3:nth-child(2){
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.shadow {
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    height: 10px;
+    z-index: 0;
+}
+
+#dummyheader, #dummyheader-sub {
+  visibility: hidden;
+}
+
+.controls {
+  float: right;
+  width: 40%;
+  line-height: 200%;
+  ul {
+    min-width: 240px;
+    float: right;
+  }
+  li {
+    a {
+      font-family: $font-family-condensed-light;
+      color: #9d9d9d;
+      font-size: 1.7rem;
+      &:hover {
+        text-decoration: none;
+        color: #222222;
+      }
+    }
+  }
+}
+
+
+.btn-round {
+  border-radius: 5px;
+}
+
+.btn-inverted {
+  background-color: rgb(181,181,181);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 8px 19px;
+}
+
+.fancybox-model-controller {
+    position: absolute;
+    color: white;
+    font-size: 4.5em;
+    line-height: 4rem;
+    z-index: 8040;
+
+    &.fancybox-model-previous {
+        top: 50%;
+        left: 4rem;
+        -webkit-transform: translate(0%,-50%);
+        -moz-transform: translate(0%,-50%);
+        -ms-transform: translate(0%,-50%);
+        -o-transform: translate(0%,-50%);
+        transform: translate(0%,-50%);
+    }
+    &.fancybox-model-next {
+        top: 50%;
+        right: 4rem;
+        -webkit-transform: translate(0%,-50%);
+        -moz-transform: translate(0%,-50%);
+        -ms-transform: translate(0%,-50%);
+        -o-transform: translate(0%,-50%);
+        transform: translate(0%,-50%);
+    }
+    &.fancybox-model-close {
+        top: 2.5rem;
+        right: 5rem;
+        font-size: 5.5rem;
+    }
+}
+
+.bg-white{
+    background : #FFFFFF;
+}
+
+.slick-slide {
+    outline: none;
+}
+.infinite-scroll-paging {
+    display: none;
+}
+
+.button-loading {
+    display: none;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    background-color: #BF1B7C;
+    text-indent: 500%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.wishlist-counter {
+    color: #BF1B7C;
+    font-size: 1.2em;
+    position: relative;
+    font-weight: bold;
+    top: -0.5rem;
+    left: 0rem;
+}
+
+.wishlist-link {
+    top: 0.6rem;
+    position: relative;
+}

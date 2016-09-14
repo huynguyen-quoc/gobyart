@@ -1,0 +1,210 @@
+/*----------------------------------------------------------------*/
+/*  MODELS SCSS
+/*----------------------------------------------------------------*/
+
+.model-is-active{
+  display: none;
+}
+.grid-model-list {
+  min-height: 300px;
+}
+.is-not-touch {
+  .model {
+    &:hover {
+      .model-is-active {
+        display: inline;
+      }
+      .wishlist-icon-wrapper {
+        background-color: rgba(175, 25, 125, 0.9);
+      }
+      .wishlist-toggle-wrapper {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    &:not(.wishlist) {
+      .not-in-wishlist {
+        display: block;
+      }
+    }
+  }
+
+}
+.model {
+  .in-wishlist {
+    display: none;
+  }
+  .not-in-wishlist {
+    display: block;
+  }
+
+  &.wishlist {
+    .in-wishlist{
+      display: block;
+    }
+    .not-in-wishlist {
+      display: none;
+    }
+  }
+
+
+
+  .wishlist-toggle-wrapper {
+    .in-wishlist {
+      background-color: rgba(175, 25, 125, 0.9);
+      padding: 3% 0;
+    }
+
+    .not-in-wishlist {
+      background-color: rgba(0,0,0,0.85);
+      padding: 3% 0;
+    }
+  }
+
+  &.active-touch {
+    .wishlist-toggle-wrapper {
+      visibility: visible;
+      opacity: 1;
+    }
+    .wishlist-icon-wrapper {
+      background-color: rgba(175, 25, 125, 0.9);
+    }
+  }
+
+
+  .model-name-wrapper {
+    a {
+      display: block;
+      padding-bottom: 2px;
+    }
+    text-align: center;
+    overflow: hidden;
+    padding: 4% 0 0 0;
+    margin-bottom: -2px;
+    display: none /*TODO*/;
+  }
+
+  .model-name {
+    font-size: 1.5rem;
+    //white-space: nowrap;
+    //color: #bbbbbb;
+    //border-bottom: 1px solid #dddddd;
+    &[data-name]{
+      &:after {
+        content:attr(data-name);
+      }
+    }
+  }
+
+  &:hover {
+    .model-name {
+      color: #222222;
+      border-color: #222222;
+    }
+  }
+
+  .wishlist-icon-wrapper {
+    position: absolute;
+    right: 0;
+    top: 1.25rem;
+    z-index: 20;
+    padding: 2.5%;
+    border-bottom: 2px solid white;
+    color: white;
+    background-color: rgba(0,0,0,1);
+    cursor: pointer;
+  }
+
+
+
+  .wishlist-toggle-wrapper {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    color: white;
+    font-size: 1.7rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    webkit-transition: visibility 0.25s, opacity 0.25s;
+    -moz-transition: visibility 0.25s, opacity 0.25s;
+    -o-transition: visibility 0.25s, opacity 0.25s;
+    transition: visibility 0.25s, opacity 0.25s;
+    font-family: $font-family-condensed-light;
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+    .button-loading {
+      -webkit-animation: zoomin infinite linear .75s;
+      animation: zoomin infinite linear .75s;
+    }
+     &.loading {
+       cursor: progress;
+       .button-loading {
+         display: block;
+       }
+       .icon-label {
+         display: none;
+       }
+     }
+
+    .in-wishlist {
+      background-color: rgba(175, 25, 125, 0.9);
+      padding: 3% 0;
+      .button-loading {
+        background-color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.model-img-wrapper{
+  position: relative;
+  background-color: #f6f6f6;
+  &.model-background-img-wrapper{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-bottom: 144.6875%;
+  }
+}
+
+
+
+
+
+.model-name-box{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  right: 0;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,.8);
+  padding: 3%;
+  text-align: center;
+  font-family: $font-family-condensed-light;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+0,0.5+100 */
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+}
+
+.model-name-box{
+  font-size:1.5rem;
+  color:#ffffff;
+  font-family: $font-family-condensed-light;
+}
+
+
+
+
+
+

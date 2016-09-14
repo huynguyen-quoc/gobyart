@@ -1,0 +1,16 @@
+/*----------------------------------------------------------------*/
+/*  PARALLAX
+/*----------------------------------------------------------------*/
+.parallax {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  &.background-attachment-scroll {
+    background-attachment: scroll !important;
+  }
+}
+
+.parallax-spacer {
+  min-height: 600px;
+  height: 90%;
+}

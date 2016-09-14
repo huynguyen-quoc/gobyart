@@ -1,0 +1,127 @@
+/*
+ * Chat
+ */
+.image-detail {
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: $chat--width;
+  z-index: 1001; // over top navbar
+  overflow: hidden;
+
+  @media #{$small-and-down} {
+    width: 100%;
+  }
+
+  .layer-content {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+
+  .layer-overlay,
+  .layer-content {
+    background: $chat--bgcolor;
+  }
+
+
+  // top bar
+  .topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $chat--send-height;
+    background: nth($chat--bgcolors, 1);
+
+    > a {
+      font-size: 1.3rem;
+      line-height: $chat--send-height;
+      height: $chat--send-height;
+      padding: 0 10px;
+      color: #fff;
+      display: inline-block;
+
+      > i {
+        vertical-align: middle;
+        font-size: 2rem;
+      }
+
+      &.text {
+        padding-left: 20px;
+      }
+    }
+
+    .image-detail-toggle-close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #fff;
+      z-index: 3;
+      font-size: 2rem;
+      line-height: $chat--send-height - 6px;
+    }
+  }
+
+  // image wrapper
+.images-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    > .nano {
+      margin-top: $chat--send-height;
+    }
+
+    .label {
+      font-size: .9em;
+      display: block;
+      text-transform: uppercase;
+      text-align: center;
+      color: #767CA0;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .image {
+      position: relative;
+      color: #fff;
+      padding: 10px 1rem;
+      cursor: pointer;
+
+      //&:hover {
+      //  background-color: nth($chat--bgcolors, 1);
+      //}
+
+      .photo {
+        width: 100%;
+        vertical-align: middle;
+        float: left;
+        border-radius: 4px;
+      }
+
+      .name {
+        font-weight: bold;
+        font-size: 1.1em;
+        display: inline-block;
+      }
+
+      .size {
+        font-size: 1em;
+        color: #D8D8D8;
+      }
+
+      .remove-image {
+        position: absolute;
+        font-size: 1.5rem;
+        bottom: 16px;
+        margin-top: -6px;
+        right: 1rem;
+      }
+    }
+  }
+
+}

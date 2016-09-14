@@ -1,0 +1,77 @@
+{
+  "root": {
+    "src": "./resources/assets",
+    "dest": "./public/assets/admin",
+    "staticdest": "./public/assets",
+    "frontendsrc": "./resources/assets/frontend",
+    "frontenddest": "./public/assets/frontend"
+  },
+
+  "tasks": {
+
+    "static": {
+      "src": "static/assets",
+      "dest": "./assets"
+    },
+    "staticbower": {
+      "src": "static/bower_components",
+      "dest": "./bower_components"
+    },
+    "js": {
+      "src": "js",
+      "dest": "_con/js",
+      "extensions": ["js"]
+    },
+
+    "css": {
+      "src": "css",
+      "dest": "_con/css",
+      "dest_deploy": "scss",
+      "autoprefixer": {
+        "browsers": ["last 3 version"]
+      },
+      "sass": {
+        "indentedSyntax": true
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+    "frontendjs": {
+      "src": "js",
+      "dest": "js",
+      "extensions": ["js"]
+    },
+    "frontendimage": {
+      "src": "images",
+      "dest": "images"
+    },
+    "frontendfonts": {
+      "src": "fonts",
+      "dest": "fonts"
+    },
+
+
+    "frontendcss": {
+      "src": "css",
+      "dest": "css",
+      "dest_deploy": "scss",
+      "autoprefixer": {
+        "browsers": ["last 3 version"]
+      },
+      "sass": {
+        "indentedSyntax": false
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+
+    "images": {
+      "src": "images",
+      "dest": "assets/_con/images",
+      "src_placeholders": "images-placeholders",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
+    "zip": {
+      
+    }
+  }
+}

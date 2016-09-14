@@ -1,0 +1,90 @@
+
+/*----------------------------------------------------------------*/
+/*  MASONRY
+/*----------------------------------------------------------------*/
+
+.grid{
+  position:relative;
+}
+
+.grid-item {
+  position:relative;
+  float: left;
+  margin-bottom: 2.5%;
+  line-height: 0;
+  .model-img-wrapper {
+     a {
+       line-height: 0;
+       * {
+         line-height: normal;
+       }
+     }
+  }
+
+  .model-img-wrapper {
+    line-height: 0;
+    * {
+      line-height: normal;
+    }
+  }
+
+  .instagram-wrapper {
+    a {
+      line-height: 0;
+      * {
+        line-height: normal;
+      }
+    }
+  }
+
+  * {
+    line-height: normal;
+  }
+
+  a {
+    text-decoration:none;
+    &:link , &:visited, &:hover{
+      text-decoration:none;
+    }
+
+  }
+  & img, & video {
+    width: 100%;
+  }
+}
+
+
+.grid-default,
+.grid-masonry{
+
+  margin-left: -0.5%;
+  margin-right: -0.5%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+
+
+.grid-default {
+  .grid-item {
+    position:relative;
+    float: left;
+    margin: .5%;
+  }
+}
+
+
+.grid-masonry{
+  display: none;
+  .grid-item {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+  .masonry-brick {
+    position:  relative;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+  }
+  &.active {
+    display: block;
+  }
+}

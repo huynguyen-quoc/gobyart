@@ -10,6 +10,12 @@ bootstrap/cache/
 .env.*.php
 .env.php
 .env
+.idea/
+storage/upload/base64/
+storage/upload/full/
+storage/upload/low/
+storage/upload/medium/
+exports/
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/

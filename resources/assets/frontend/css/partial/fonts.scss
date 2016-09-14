@@ -1,0 +1,100 @@
+/*----------------------------------------------------------------*/
+/*  Fonts
+/*----------------------------------------------------------------*/
+
+// Roboto Regular
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url($font-path + "Roboto-Regular.eot?5km1tg");
+    src: url($font-path + "Roboto-Regular.eot?#iefix5km1tg") format("embedded-opentype"),
+         url($font-path + "Roboto-Regular.woff?5km1tg") format('woff'),
+         url($font-path + "Roboto-Regular.ttf?5km1tg") format('truetype'),
+         url($font-path + "Roboto-Regular.svg?5km1tg#robotolight") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Roboto Thin
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url($font-path + "Roboto-Thin.eot?5km1tg");
+  src: url($font-path + "Roboto-Thin.eot?#iefix5km1tg") format("embedded-opentype"),
+  url($font-path + "Roboto-Thin.woff?5km1tg") format('woff'),
+  url($font-path + "Roboto-Thin.ttf?5km1tg") format('truetype'),
+  url($font-path + "Roboto-Thin.svg?5km1tg#robotothin") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// RobotoCondensed-Regular
+@font-face {
+  font-family: "RobotoCondensed-Regular";
+  src: url($font-path + "RobotoCondensed-Regular.eot?5km1tg");
+  src: url($font-path + "RobotoCondensed-Regular.eot?#iefix5km1tg") format("embedded-opentype"),
+  url($font-path + "RobotoCondensed-Regular.woff?5km1tg") format('woff'),
+  url($font-path + "RobotoCondensed-Regular.ttf?5km1tg") format('truetype'),
+  url($font-path + "RobotoCondensed-Regular.svg?5km1tg#robotocondensed") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// RobotoCondensed-Light
+@font-face {
+  font-family: "RobotoCondensed-Light";
+  src: url($font-path + "RobotoCondensed-Light.eot?5km1tg");
+  src: url($font-path + "RobotoCondensed-Light.eot?#iefix5km1tg") format("embedded-opentype"),
+  url($font-path + "RobotoCondensed-Light.woff?5km1tg") format('woff'),
+  url($font-path + "RobotoCondensed-Light.ttf?5km1tg") format('truetype'),
+  url($font-path + "RobotoCondensed-Light.svg?5km1tg#robotocondensedlight") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+// Roboto Light
+@font-face {
+  font-family: "Roboto-Light";
+  src: url($font-path + "Roboto-Light.eot?5km1tg");
+  src: url($font-path + "Roboto-Light.eot?#iefix5km1tg") format("embedded-opentype"),
+  url($font-path + "Roboto-Light.woff?5km1tg") format('woff'),
+  url($font-path + "Roboto-Light.ttf?5km1tg") format('truetype'),
+  url($font-path + "Roboto-Light.svg?5km1tg#robotolight") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+//// Icon Font
+@font-face {
+  font-family: "gobyArtIcon";
+  src: url($font-path + 'SOFA53NEUN-ICE.eot'); /* IE9 Compat Modes */
+  src: url($font-path + 'SOFA53NEUN-ICE.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url($font-path + 'SOFA53NEUN-ICE.woff2') format('woff2'), /* Super Modern Browsers */
+       url($font-path + 'SOFA53NEUN-ICE.woff') format('woff'), /* Pretty Modern Browsers */
+       url( $font-path + 'SOFA53NEUN-ICE.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 500;
+}
+
+//// Goby Font
+@font-face {
+  font-family: "gobyIcon";
+  src: url($font-path + 'goby.eot'); /* IE9 Compat Modes */
+  src: url($font-path + 'goby.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url($font-path + 'goby.woff2') format('woff2'), /* Super Modern Browsers */
+  url($font-path + 'goby.woff') format('woff'), /* Pretty Modern Browsers */
+  url( $font-path + 'goby.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 500;
+}
+
+//// Material Icon Font
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url($font-path + 'MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url($font-path + 'MaterialIcons-Regular.woff2') format('woff2'),
+  url($font-path + 'MaterialIcons-Regular.woff') format('woff'),
+  url($font-path + 'MaterialIcons-Regular.ttf') format('truetype');
+}
+

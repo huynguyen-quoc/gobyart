@@ -1,0 +1,36 @@
+
+/*----------------------------------------------------------------*/
+/*  GALLERY
+/*----------------------------------------------------------------*/
+
+.gallery{
+
+}
+
+.gallery-img-wrapper {
+  position: relative;
+  background-color: #f6f6f6;
+}
+
+
+img.image-loaded {
+  opacity: 1;
+}
+
+
+img.image-loaded {
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.grid-item {
+  img {
+    width: 100%;
+  }
+  .gallery-img-wrapper {
+    line-height: 0;
+  }
+}

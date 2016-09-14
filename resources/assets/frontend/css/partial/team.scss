@@ -1,0 +1,76 @@
+/*----------------------------------------------------------------*/
+/*  TEAM SCSS
+/*----------------------------------------------------------------*/
+
+.team {
+  .team-name-wrapper {
+    a {
+      display: block;
+      padding-bottom: 2px;
+    }
+    text-align: center;
+    overflow: hidden;
+    padding: 4% 0 0 0;
+    margin-bottom: -2px;
+    display: none /*TODO*/;
+  }
+
+  .team-name {
+    font-size: 1.5rem;
+    //white-space: nowrap;
+    //color: #bbbbbb;
+    //border-bottom: 1px solid #dddddd;
+    &[data-name]{
+      &:after {
+        content:attr(data-name);
+      }
+    }
+  }
+
+
+}
+
+.team-img-wrapper{
+  position: relative;
+  background-color: #f6f6f6;
+  &.team-background-img-wrapper{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-bottom: 144.6875%;
+  }
+}
+
+
+
+
+
+.team-name-box{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  right: 0;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,.8);
+  padding: 3%;
+  text-align: center;
+  font-family: $font-family-condensed-light;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+0,0.5+100 */
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+}
+
+.team-name-box{
+  font-size:1.5rem;
+  color:#ffffff;
+  font-family: $font-family-condensed-light;
+}
+
+
+

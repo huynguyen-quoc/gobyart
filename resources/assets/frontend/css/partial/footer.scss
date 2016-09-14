@@ -1,0 +1,39 @@
+/*----------------------------------------------------------------*/
+/*  FOOTER
+/*----------------------------------------------------------------*/
+
+
+.footer-inner {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.footerNav a, .footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer {
+  color: #FFFFFF;
+  .socialbookmark-container {
+    float: right;
+    margin-right: -0.5rem;
+    position: relative;
+    top: -1rem;
+    .socialbookmark-row {
+      display: inline-block;
+    }
+  }
+  u {
+    font-family: $font-family-condensed-light;
+  }
+  p {
+    font-family: $font-family-condensed-light;
+  }
+   & .social-bookmark {
+     font-size: 2.0rem !important;
+     line-height: 3rem;
+     opacity: 0.9;
+     padding: 0.75rem;
+     text-align: center;
+   }
+}

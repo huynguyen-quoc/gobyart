@@ -1,0 +1,70 @@
+/*----------------------------------------------------------------*/
+/*  CONTACT
+/*----------------------------------------------------------------*/
+
+#map-canvas {
+  height: 50%;
+  width: 100%;
+  min-height: 300px;
+
+}
+
+.contact-message {
+  line-height: normal;
+  font-size: 1.5em;
+  min-height: 200px;
+  text-align: center;
+}
+.contact-controls {
+  margin-top: 1em;
+  font-size: 1.5rem;
+
+  .btn {
+    display: inline-block;
+  }
+  .col {
+    float: left;
+    position: relative;
+    .btn {
+      text-transform: uppercase;
+      text-align: center;
+      font-family: $font-family-condensed-light;
+      width: 100%;
+      font-size: 1.5rem;
+      white-space: normal;
+      border : none;
+      margin: 0 0 0.5rem 0 !important;
+    }
+  }
+  .col1 {
+    width: 50%;
+  }
+  .col2 {
+    width: 50%;
+    padding: 0 0.8rem;
+  }
+
+  input:not([type='submit']), textarea {
+    border: 1px solid #eeeeee !important;
+    padding: 2.0rem;
+    font-family: $font-family-condensed-light;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    color: #666666;
+    width: 100%;
+  }
+  input:not([type='submit']) {
+    height: 2.5rem;
+    color: black;
+  }
+
+  textarea {
+    height: 15rem;
+  }
+
+
+  .error-message{
+    color: #E53935;
+  }
+
+}

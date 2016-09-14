@@ -1,0 +1,42 @@
+/*----------------------------------------------------------------*/
+/*  Partner
+/*----------------------------------------------------------------*/
+
+.partner-slideshow-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #FFFFFF;
+    a {
+      text-decoration:  none;
+      &.partner-bt-left {
+        position: absolute;
+        left: -0.8em;
+        top: 1.2em;
+        font-size: 40px;
+        color: #000000;
+        padding: 0 4px;
+        cursor: pointer;
+        &:hover {
+              color: #59aaed;
+            }
+      }
+      &.partner-bt-right {
+        position: absolute;
+        right: -0.8em;
+        top: 1.2em;
+        font-size: 40px;
+        color: #000000;
+        padding: 0 4px;
+        cursor: pointer;
+        &:hover {
+          color: #59aaed;
+        }
+      }
+    }
+
+   img {
+     height: 120px;
+     padding: 1.5em 5.0em;
+   }
+
+}

@@ -1,0 +1,102 @@
+/*----------------------------------------------------------------*/
+/*  ARTISTS
+/*----------------------------------------------------------------*/
+.artist-filter {
+  padding: 2.5% 0;
+  height: 20%;
+  position: relative;
+  display: inline-block;
+  li {
+    font-size: 2.0rem;
+    font-family: $font-family-condensed-light;
+    text-transform: lowercase;
+    display: inline-block;
+    padding: 0 1rem 0 0;
+    a {
+      color: #9d9d9d;
+    }
+    &.selected {
+      a {
+        color: black;
+      }
+    }
+  }
+}
+
+.artist-filter-type {
+  padding: 2.5% 0;
+  height: 20%;
+  position: relative;
+  display: inline-block;
+  float: right;
+  font-family: $font-family-condensed-light;
+  font-size: 1.5rem;
+  color: #9d9d9d;
+  span {
+    color: #000000;
+  }
+}
+
+.artist-type-wrapper{
+  position: relative;
+  font-family: $font-family-condensed-light;
+  .artist-check {
+    top : -2px
+
+  }
+  .artist-type-content {
+    margin-top: -14em;
+    background: rgba(46,53,54,.75);
+    padding-left: 15px;
+    padding-right: 15px;
+    .artist-type-content-inner {
+      margin-right: auto;
+      margin-left: auto;
+      color: #fff;
+      padding: 35px 0;
+      display: table;
+      width: 100%;
+      text-align: center;
+      .artist-text {
+        display: table;
+        width: 100%;
+        p {
+          font-size: 3.2rem;
+          padding: 0 1.5rem 3.5rem 1.3rem;
+          margin: 0;
+          line-height: 30px;
+        }
+      }
+      .form-search{
+        .search-item {
+          padding: 15px 15px;
+          display: inline-block;
+          label {
+            padding: 0 1.2rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+          }
+          .btn {
+            text-transform: uppercase;
+            text-align: center;
+            font-family: $font-family-condensed-light;
+            width: 100%;
+            font-size: 1.5rem;
+            white-space: normal;
+            margin: 0 0 0.5rem 0 !important;
+            background-color: #9e005d;
+            &.btn-inverted {
+              padding: 10px 10px;
+            }
+          }
+          a:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

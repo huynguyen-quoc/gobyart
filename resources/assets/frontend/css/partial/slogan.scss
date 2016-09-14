@@ -1,0 +1,22 @@
+/*----------------------------------------------------------------*/
+/*  SLOGAN
+/*----------------------------------------------------------------*/
+
+
+.slogan {
+  overflow: hidden;
+  color: #fff;
+  font-size: 1.3em;
+  line-height: 140%;
+  background-image: url($image-path + "ICE_9427.jpg");
+  background-position: center top;
+  font-family: $font-family-condensed-light;
+  position: relative;
+  min-height : 800px;
+ .slogan-inner{
+   background: rgba(0, 0, 0, 0.7);
+   position: absolute;
+   bottom: 0;
+ }
+}
+
