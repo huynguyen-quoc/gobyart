@@ -1,3 +1,4 @@
+@if(isset($teams) && count($teams)> 0)
 <div class="full-width bg-white">
     <div class="content">
         <div class="headbox">
@@ -38,3 +39,4 @@
         </div>
     </div>
 </div>
+@endif
