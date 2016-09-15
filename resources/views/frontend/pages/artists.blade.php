@@ -68,7 +68,7 @@
             <div class='masonry-brick'>
                 <article class='model grid-item' data-artist='#=base64 #'>
                     <a href='/nghe-si/#=data[i].slug#' >
-                        <div class='model-img-wrapper model-background-img-wrapper' style='background-image: url()'>
+                        <div class='model-img-wrapper model-background-img-wrapper' style='background-image: url(#=data[i].file_id#.#=data[i].extension#)'>
                             <div class='model-name-box'>
                                 <span class='model-name' data-name='#=data[i].full_name#'></span> </div>
                             <div class='wishlist-icon-wrapper in-wishlist' >
