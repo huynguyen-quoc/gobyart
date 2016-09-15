@@ -39,7 +39,7 @@ var ArtistPage = function(){
                     speed: 'fast',
                     start:  function(opts){
                         if(totalGrid <= opts.state.currPage) return;
-                        $('#loading-more-btn').html(' <span class="gobyArtIcon medium">F</span><br>Đang Tải...</a>');
+                        $('#loading-more-btn').html('<span class="gobyArtIcon medium">F</span><br>Đang Tải...</a>');
                         var  path = opts.path;
                         opts.state.currPage++;
                         var  desturl = (typeof path === 'function') ? path(opts.state.currPage - 1) : path.join(opts.state.currPage - 1);
@@ -53,7 +53,7 @@ var ArtistPage = function(){
                                 opts.state.isDuringAjax = false;
                                 if(data.total_page >= opts.state.currPage) {
                                     opts.state.isDone = true;
-                                    $('#loading-more-btn').remove();
+                                    $('#loading-more-btn span').remove();
                                 }
                                 opts.callback($(opts.contentSelector)[0],data,desturl);
                             },
