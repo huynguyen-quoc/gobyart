@@ -10,13 +10,13 @@
         <meta name="apple-touch-fullscreen" content="yes">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link href="/assets/bower_components/iCheck/skins/all{{ env('APP_ENV') == 'production' ? '.min':'' }}.css" rel="stylesheet">
+        <link href="/assets/bower_components/iCheck/skins/all.css" rel="stylesheet">
         <link href="/assets/bower_components/kendo-ui/styles/kendo.common.min.css" rel="stylesheet">
         <link href="/assets/bower_components/kendo-ui/styles/kendo.default.min.css" rel="stylesheet">
         <link href="/assets/bower_components/kendo-ui/styles/kendo.silver.min.css" rel="stylesheet">
         <link href="/assets/bower_components/fancybox/source/jquery.fancybox.css" rel="stylesheet">
 
-        <link href="/assets/frontend/css/app.css" rel="stylesheet">
+        <link href="/assets/frontend/css/app{{ env('APP_ENV') == 'production' ? '.min':'' }}.css" rel="stylesheet">
         @yield('styles')
 
          <!--[if lt IE 9]>
