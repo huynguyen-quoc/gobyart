@@ -53,7 +53,7 @@ var ArtistPage = function(){
                                 opts.state.isDuringAjax = false;
                                 console.log(data.total_page)
                                 console.log(opts.state.currPage)
-                                if(data.total_page >= opts.state.currPage) {
+                                if(data.total_page <= opts.state.currPage) {
                                     opts.state.isDone = true;
                                     $('#loading-more-btn').remove();
                                 }
