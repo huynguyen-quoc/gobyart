@@ -49,8 +49,7 @@ class ArtistController extends FrontEndController  {
             $query->where(DB::raw('CONCAT(\',\', ?, \',\')'), 'like', DB::raw('CONCAT(\'%,\', artist_type.slug, \',%\')'));
             array_push($parameter, str_replace('_', ',',$category));
         }
-        $query->inRandomOrder()
-            ->offset($page)
+        $query->offset($page)
             ->limit($pageSize);
         $query->setBindings($parameter);
         $artists = $query->get();
