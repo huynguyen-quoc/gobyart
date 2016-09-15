@@ -63,7 +63,7 @@
     </script>
     <script id="artistDetail" type="text/x-kendo-template">
         # for(var i = 0; i< data.length; i++) { #
-            # var wordArray = CryptoJS.enc.Utf8.parse(data[i]); #
+            # var wordArray = CryptoJS.enc.Utf8.parse(JSON.stringify(data[i])); #
             # var base64 = CryptoJS.enc.Base64.stringify(wordArray);#
             <div class='masonry-brick'>
                 <article class='model grid-item touch-item #= data[i].added_cart ? "wishlist" :"" #' data-artist='#=base64 #'>
