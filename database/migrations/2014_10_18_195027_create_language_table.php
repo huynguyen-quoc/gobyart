@@ -12,7 +12,6 @@ class CreateLanguageTable extends Migration {
 	public function up()
 	{
 		Schema::create( 'language', function(Blueprint $table){
-		    $table->engine = 'InnoDB';
 				$table->increments('id')->unsigned();
 				$table->integer('order')->nullable();
 				$table->string('name', 50)->unique();

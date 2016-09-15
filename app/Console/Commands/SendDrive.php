@@ -101,6 +101,7 @@ class SendDrive extends Command
         Log::info('[ QUERY FILE  GOOGLE DRIVE ]');
         $googleClient = Google::getClient();
         $googleClient->setScopes(Google_Service_Drive::DRIVE);
+        $googleClient->
         // $client = new Client($googleClient->getConfig());
         $storageService = new Google_Service_Drive($googleClient);
         $fileResult = $storageService->files->listFiles(array(
