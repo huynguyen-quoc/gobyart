@@ -90,7 +90,7 @@
                             </div>
                     </a>
                     <div class='model-name-wrapper'>
-                        <a href='#'> <span class='model-name'>#= data[i].full_name #</span> </a>
+                        <a href='\\#'> <span class='model-name'>#= data[i].full_name #</span> </a>
                     </div>
                 </article>
             </div>
