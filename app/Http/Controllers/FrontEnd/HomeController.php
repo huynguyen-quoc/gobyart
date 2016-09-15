@@ -25,7 +25,7 @@ class HomeController extends FrontEndController
             ->with('seo')
             ->with('avatar')
             ->inRandomOrder()
-            ->limit(10)
+            ->limit(15)
             ->get();
 
 //        $partners = File::query()

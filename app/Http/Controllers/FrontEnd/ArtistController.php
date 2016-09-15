@@ -67,7 +67,15 @@ class ArtistController extends FrontEndController  {
 
         //$total = json_decode(json_encode($total), true);
         $totalPage = round(($total  - 1) / $pageSize);
-		return view('frontend.pages.artists', compact('filter', 'artists', 'totalPage'));
+        if ($request->wantsJson()) {
+            $response = array(
+                "artists" => $artists,
+                "total_page" => $totalPage
+            );
+            return response($response, 200);
+        }else {
+            return view('frontend.pages.artists', compact('filter', 'artists', 'totalPage'));
+        }
 	}
 
 	public function detail($slug = ''){

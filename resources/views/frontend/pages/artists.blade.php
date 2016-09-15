@@ -61,6 +61,41 @@
             <div class="grid-item"> <img src="/upload/low/#= data[3].file_id + '.' + data[3].extension#"></div>
         #}#
     </script>
+    <script id="artistDetail" type="text/x-kendo-template">
+        # for(var i = 0; i< data.length; i++) { #
+            #  var wordArray = CryptoJS.enc.Utf8.parse(data[i]); #
+            # var base64 = CryptoJS.enc.Base64.stringify(wordArray);#
+            <div class='masonry-brick'>
+                <article class='model grid-item' data-artist='#=base64 #'>
+                    <a href='/nghe-si/#=data[i].slug#' >
+                        <div class='model-img-wrapper model-background-img-wrapper' style='background-image: url(#=data[i].file_id#.#=data[i].extension#)'>
+                            <div class='model-name-box'>
+                                <span class='model-name' data-name='#=data[i].full_name#'></span> </div>
+                            <div class='wishlist-icon-wrapper in-wishlist' >
+                                <div class=''>
+                                    <span class='model-is-active gobyArtIcon'>D</span>
+                                    <span class='gobyArtIcon'>S</span>
+                                </div>
+                            </div>
+                            <div class='wishlist-toggle-wrapper'>
+                                <div class='in-wishlist'>
+                                    <span class='icon-label s_hidden'>Shortlist remove</span>
+                                    <span class='icon-label l_hidden m_hidden'>Shortlist </span>
+                                </div>
+                                <div class='not-in-wishlist'>
+                                     <span class='icon-label s_hidden'>Add to shortlist</span>
+                                     <span class='icon-label l_hidden m_hidden'>Shortlist +</span>
+                                </div>
+                            </div>
+                            </div>
+                    </a>
+                    <div class='model-name-wrapper'>
+                        <a href='#'> <span class='model-name'>#= data[i].full_name #</span> </a>
+                    </div>
+                </article>
+            </div>
+        # } #
+    </script>
     <script type="text/javascript">
 
         $(function () {

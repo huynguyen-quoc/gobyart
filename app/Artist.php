@@ -51,12 +51,12 @@ class Artist extends Model
         'first_name' => 'required',
         'last_name' => 'required',
         'full_name' => 'required',
-        'date_of_birth' => 'required|date_format:d/m/Y'
+        //'date_of_birth' => 'required|date_format:d/m/Y'
     ];
     public static $messages = [
         'file.required' => 'Image is required',
-        'date_of_birth.date_format' => 'Invalid Format',
-        'date_of_birth.required' => 'Date Of Birth is required',
+        //'date_of_birth.date_format' => 'Invalid Format',
+        //'date_of_birth.required' => 'Date Of Birth is required',
         'last_name.required' => 'Last Name is required',
         'first_name.required' => 'First Name is required',
         'full_name.required' =>   'Full Name is required',
