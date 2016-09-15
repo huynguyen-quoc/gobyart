@@ -188,36 +188,38 @@ var ArtistPage = function(){
             // Function called once the elements are retrieved
             function(data) {
                 var artists =  data.artists;
-                var temps = [];
-                $.each(artists, function(index, artist){
-                    var url = artist.image_url;
-                    var data = JSON.stringify(artist);
-                    var wordArray = CryptoJS.enc.Utf8.parse(data);
-                    var base64 = CryptoJS.enc.Base64.stringify(wordArray);
-
-                    var template = "<div class='masonry-brick'> <article class='model grid-item' data-artist='" + base64 + "'>" +
-                        "<a href='/nghe-si' > " +
-                        "<div class='model-img-wrapper model-background-img-wrapper' style='background-image: url(" + url + ")'>" +
-                        "<div class='model-name-box'> <span class='model-name' data-name='" + artist.full_name + "'></span> </div>" +
-                        "<div class='wishlist-icon-wrapper in-wishlist' > <div class=''>" +
-                        "<span class='model-is-active gobyArtIcon'>D</span> <span class='gobyArtIcon'>S</span> </div> </div>" +
-                        "<div class='wishlist-toggle-wrapper'> <div class='in-wishlist'> " +
-                        "<span class='icon-label s_hidden'>Shortlist remove</span> " +
-                        "<span class='icon-label l_hidden m_hidden'>Shortlist </span> " +
-                        "<span class='sofaIcon l_hidden m_hidden'>D</span> " +
-                        "</div>" +
-                        "<div class='not-in-wishlist'>" +
-                        "<span class='icon-label s_hidden'>Add to shortlist</span>" +
-                        " <span class='icon-label l_hidden m_hidden'>Shortlist +</span>" +
-                        "</div>" +
-                        "</div>" +
-                        "</div> </a> " +
-                        "<div class='model-name-wrapper'> <a href='#'> <span class='model-name'>" + artist.full_name + "</span> </a>"+
-                        "</div> </article> </div>";
-                    // $grid.append($.parseHTML(template));
-                    temps.push($.parseHTML(template)[0]);
-                });
-                temps = $(temps).css('opacity', 0);
+                // var temps = [];
+                var artistDetails = kendo.template($("#artistDetail").html());
+                var pagingNumbers =  artistDetails(artists);
+                // $.each(artists, function(index, artist){
+                //     var url = artist.image_url;
+                //     var data = JSON.stringify(artist);
+                //     var wordArray = CryptoJS.enc.Utf8.parse(data);
+                //     var base64 = CryptoJS.enc.Base64.stringify(wordArray);
+                //
+                //     var template = "<div class='masonry-brick'> <article class='model grid-item' data-artist='" + base64 + "'>" +
+                //         "<a href='/nghe-si' > " +
+                //         "<div class='model-img-wrapper model-background-img-wrapper' style='background-image: url(" + url + ")'>" +
+                //         "<div class='model-name-box'> <span class='model-name' data-name='" + artist.full_name + "'></span> </div>" +
+                //         "<div class='wishlist-icon-wrapper in-wishlist' > <div class=''>" +
+                //         "<span class='model-is-active gobyArtIcon'>D</span> <span class='gobyArtIcon'>S</span> </div> </div>" +
+                //         "<div class='wishlist-toggle-wrapper'> <div class='in-wishlist'> " +
+                //         "<span class='icon-label s_hidden'>Shortlist remove</span> " +
+                //         "<span class='icon-label l_hidden m_hidden'>Shortlist </span> " +
+                //         "<span class='sofaIcon l_hidden m_hidden'>D</span> " +
+                //         "</div>" +
+                //         "<div class='not-in-wishlist'>" +
+                //         "<span class='icon-label s_hidden'>Add to shortlist</span>" +
+                //         " <span class='icon-label l_hidden m_hidden'>Shortlist +</span>" +
+                //         "</div>" +
+                //         "</div>" +
+                //         "</div> </a> " +
+                //         "<div class='model-name-wrapper'> <a href='#'> <span class='model-name'>" + artist.full_name + "</span> </a>"+
+                //         "</div> </article> </div>";
+                //     // $grid.append($.parseHTML(template));
+                //     temps.push($.parseHTML(template)[0]);
+                // });
+                temps = $(pagingNumbers).css('opacity', 0);
                 temps.animate({opacity: 1});
                 $grid.append(temps);
                 $grid.masonry('appended', temps);
