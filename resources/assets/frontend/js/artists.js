@@ -29,7 +29,7 @@ var ArtistPage = function(){
                 dataType : 'json',
                 loading: {
                     finished:  function(opts){
-                        $('#loading-more-btn').html(' <span class="gobyArtIcon medium">F</span><br>Xem Thêm</a>');
+                        $('#loading-more-btn').html('<span class="gobyArtIcon medium">F</span><br>Xem Thêm');
                     },
                     finishedMsg: '',
                     img: undefined,
