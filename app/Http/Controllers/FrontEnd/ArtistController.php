@@ -23,7 +23,7 @@ class ArtistController extends FrontEndController  {
      */
 	public function  index(Request $request , $category = '', $letter = ''){
 
-        $filter = ["A", "B", "C", "D", "E", "F", "G", "H", "Y", "G", "K", "L", "M" ,"N", "O", "P", "Q", "S", "T", "U", "V", "W", "X", "Y" ,"Z"];
+        $filter = ["A", "B", "C", "D", "E", "F", "G", "H", "Y", "J", "K", "L", "M" ,"N", "O", "P", "Q", "S", "T", "U", "V", "W", "X", "Y" ,"Z"];
         $page = $request->input('page');
         $pageSize = 15;
         if(!$page) {
